@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@config "../../tailwind.config.js";
+
+@theme {
+  --color-brand-orange: #F97316;
+  --color-brand-dark: #111827;
+  --color-brand-gray: #6B7280;
+  --font-heading: var(--font-poppins), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+}
+
+:root {
+  --font-poppins: 'Poppins', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
+}
