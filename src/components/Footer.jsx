@@ -1,7 +1,7 @@
 "use client";
 
 import { FaFacebook, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
-import { Bike } from "lucide-react";
+
 export default function Footer() {
   const companyLinks = [
     { name: "About", href: "#" },
@@ -29,9 +29,9 @@ export default function Footer() {
   ];
 
   return (
-    <footer id="safety" className="bg-brand-dark text-white py-16 lg:py-20 border-t border-slate-800">
+    <footer id="safety" className="bg-brand-dark dark:bg-slate-950 text-white py-16 lg:py-20 border-t border-slate-800 dark:border-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 pb-12 border-b border-slate-800">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 pb-12 border-b border-slate-800 dark:border-slate-800/80">
           {/* Left Column: Logo & Tagline (takes 2 cols on lg) */}
           <div className="lg:col-span-2 space-y-4">
             <a href="#hero" className="flex items-center gap-2.5 group inline-flex">
@@ -42,13 +42,13 @@ export default function Footer() {
               />
             </a>
 
-            <p className="text-gray-400 text-sm max-w-sm leading-relaxed font-normal">
+            <p className="text-gray-400 dark:text-slate-400 text-sm max-w-sm leading-relaxed font-normal">
               Your Ride. Your Way. Instantly. Fast, reliable bike taxi and
               instant cargo delivery service across Kolkata.
             </p>
 
             {/* Contact Information */}
-            <div className="text-xs text-gray-400 space-y-1 pt-1 font-medium">
+            <div className="text-xs text-gray-400 dark:text-slate-400 space-y-1 pt-1 font-medium">
               <p className="flex items-center gap-2">
                 <span className="text-brand-orange font-bold">Email:</span> info@shatripthitechnologiespvtltd.in
               </p>
@@ -66,7 +66,7 @@ export default function Footer() {
                     key={idx}
                     href={item.href}
                     aria-label={item.label}
-                    className="w-9 h-9 rounded-full bg-slate-800/80 hover:bg-brand-orange text-gray-400 hover:text-white flex items-center justify-center transition-colors border border-slate-700/60"
+                    className="w-9 h-9 rounded-full bg-slate-800/80 dark:bg-slate-900 hover:bg-brand-orange text-gray-400 dark:text-slate-400 hover:text-white flex items-center justify-center transition-colors border border-slate-700/60 dark:border-slate-800"
                   >
                     <Icon className="w-4 h-4" />
                   </a>
@@ -85,7 +85,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-brand-orange text-sm font-medium transition-colors"
+                    className="text-gray-400 dark:text-slate-400 hover:text-brand-orange dark:hover:text-brand-orange text-sm font-medium transition-colors"
                   >
                     {link.name}
                   </a>
@@ -104,7 +104,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-brand-orange text-sm font-medium transition-colors"
+                    className="text-gray-400 dark:text-slate-400 hover:text-brand-orange dark:hover:text-brand-orange text-sm font-medium transition-colors"
                   >
                     {link.name}
                   </a>
@@ -123,7 +123,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-brand-orange text-sm font-medium transition-colors"
+                    className="text-gray-400 dark:text-slate-400 hover:text-brand-orange dark:hover:text-brand-orange text-sm font-medium transition-colors"
                   >
                     {link.name}
                   </a>
@@ -135,11 +135,11 @@ export default function Footer() {
 
         {/* Bottom Line Copyright */}
         <div className="pt-8 text-center sm:flex sm:items-center sm:justify-between">
-          <p className="text-xs text-gray-500 font-medium">
+          <p className="text-xs text-gray-500 dark:text-slate-400 font-medium">
             © 2026 RollORide. All rights reserved.
           </p>
 
-          <p className="text-xs text-gray-500 font-medium mt-2 sm:mt-0">
+          <p className="text-xs text-gray-500 dark:text-slate-400 font-medium mt-2 sm:mt-0">
             Designed for Kolkata with ❤️
           </p>
         </div>

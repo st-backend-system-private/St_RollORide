@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @config "../../tailwind.config.js";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-brand-orange: #F97316;
   --color-brand-dark: #111827;

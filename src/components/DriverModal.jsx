@@ -85,13 +85,13 @@ export default function DriverModal({ isOpen, onClose }) {
     >
       {/* Modal Box */}
       <div
-        className="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl border border-gray-100 relative transform transition-all animate-in fade-in zoom-in-95 duration-200"
+        className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl border border-gray-100 dark:border-slate-800 relative transform transition-all animate-in fade-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 text-gray-400 hover:text-gray-700 hover:bg-gray-100 rounded-full transition-colors"
+          className="absolute top-5 right-5 p-2 text-gray-400 dark:text-slate-400 hover:text-gray-700 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800 rounded-full transition-colors"
           aria-label="Close Modal"
         >
           <X className="w-5 h-5" />
@@ -100,13 +100,13 @@ export default function DriverModal({ isOpen, onClose }) {
         {isSuccess ? (
           /* Success Confirmation State */
           <div className="py-8 text-center space-y-4">
-            <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto shadow-inner animate-bounce">
+            <div className="w-16 h-16 bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center mx-auto shadow-inner animate-bounce">
               <CheckCircle2 className="w-9 h-9 stroke-[2.5]" />
             </div>
-            <h3 className="font-heading font-extrabold text-2xl text-brand-dark">
+            <h3 className="font-heading font-extrabold text-2xl text-brand-dark dark:text-white">
               Application Received!
             </h3>
-            <p className="text-gray-600 text-sm max-w-xs mx-auto font-medium">
+            <p className="text-gray-600 dark:text-slate-300 text-sm max-w-xs mx-auto font-medium">
               Application received — we&apos;ll be in touch soon with your rider onboarding details!
             </p>
           </div>
@@ -114,10 +114,10 @@ export default function DriverModal({ isOpen, onClose }) {
           /* Application Form */
           <div>
             <div className="mb-6">
-              <h3 className="font-heading font-extrabold text-2xl text-brand-dark tracking-tight">
+              <h3 className="font-heading font-extrabold text-2xl text-brand-dark dark:text-white tracking-tight">
                 Register as a Driver
               </h3>
-              <p className="text-gray-500 text-xs sm:text-sm mt-1">
+              <p className="text-gray-500 dark:text-slate-400 text-xs sm:text-sm mt-1">
                 Join the RollORide network in Kolkata and start earning.
               </p>
             </div>
@@ -125,7 +125,7 @@ export default function DriverModal({ isOpen, onClose }) {
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Full Name */}
               <div>
-                <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-bold text-gray-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
                   Full Name
                 </label>
                 <input
@@ -134,10 +134,10 @@ export default function DriverModal({ isOpen, onClose }) {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="e.g. Rahul Kumar"
-                  className={`w-full px-4 py-2.5 rounded-xl border text-sm text-gray-900 focus:outline-none transition-colors ${
+                  className={`w-full px-4 py-2.5 rounded-xl border text-sm text-gray-900 dark:text-white bg-white dark:bg-slate-800 focus:outline-none transition-colors dark:placeholder-slate-500 ${
                     errors.name
-                      ? "border-red-500 bg-red-50/50"
-                      : "border-gray-200 focus:border-brand-orange focus:ring-1 focus:ring-brand-orange"
+                      ? "border-red-500 bg-red-50/50 dark:bg-red-950/30"
+                      : "border-gray-200 dark:border-slate-700 focus:border-brand-orange focus:ring-1 focus:ring-brand-orange"
                   }`}
                 />
                 {errors.name && (
@@ -150,7 +150,7 @@ export default function DriverModal({ isOpen, onClose }) {
 
               {/* Phone Number */}
               <div>
-                <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-bold text-gray-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
                   Phone Number
                 </label>
                 <input
@@ -159,10 +159,10 @@ export default function DriverModal({ isOpen, onClose }) {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="10-digit mobile number"
-                  className={`w-full px-4 py-2.5 rounded-xl border text-sm text-gray-900 focus:outline-none transition-colors ${
+                  className={`w-full px-4 py-2.5 rounded-xl border text-sm text-gray-900 dark:text-white bg-white dark:bg-slate-800 focus:outline-none transition-colors dark:placeholder-slate-500 ${
                     errors.phone
-                      ? "border-red-500 bg-red-50/50"
-                      : "border-gray-200 focus:border-brand-orange focus:ring-1 focus:ring-brand-orange"
+                      ? "border-red-500 bg-red-50/50 dark:bg-red-950/30"
+                      : "border-gray-200 dark:border-slate-700 focus:border-brand-orange focus:ring-1 focus:ring-brand-orange"
                   }`}
                 />
                 {errors.phone && (
@@ -175,7 +175,7 @@ export default function DriverModal({ isOpen, onClose }) {
 
               {/* Email Address */}
               <div>
-                <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-bold text-gray-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
                   Email Address
                 </label>
                 <input
@@ -184,10 +184,10 @@ export default function DriverModal({ isOpen, onClose }) {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="e.g. rahul@example.com"
-                  className={`w-full px-4 py-2.5 rounded-xl border text-sm text-gray-900 focus:outline-none transition-colors ${
+                  className={`w-full px-4 py-2.5 rounded-xl border text-sm text-gray-900 dark:text-white bg-white dark:bg-slate-800 focus:outline-none transition-colors dark:placeholder-slate-500 ${
                     errors.email
-                      ? "border-red-500 bg-red-50/50"
-                      : "border-gray-200 focus:border-brand-orange focus:ring-1 focus:ring-brand-orange"
+                      ? "border-red-500 bg-red-50/50 dark:bg-red-950/30"
+                      : "border-gray-200 dark:border-slate-700 focus:border-brand-orange focus:ring-1 focus:ring-brand-orange"
                   }`}
                 />
                 {errors.email && (
@@ -202,7 +202,7 @@ export default function DriverModal({ isOpen, onClose }) {
               <div className="grid grid-cols-2 gap-3">
                 {/* City */}
                 <div>
-                  <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
+                  <label className="block text-xs font-bold text-gray-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
                     City
                   </label>
                   <input
@@ -211,10 +211,10 @@ export default function DriverModal({ isOpen, onClose }) {
                     value={formData.city}
                     onChange={handleChange}
                     placeholder="e.g. Kolkata"
-                    className={`w-full px-4 py-2.5 rounded-xl border text-sm text-gray-900 focus:outline-none transition-colors ${
+                    className={`w-full px-4 py-2.5 rounded-xl border text-sm text-gray-900 dark:text-white bg-white dark:bg-slate-800 focus:outline-none transition-colors dark:placeholder-slate-500 ${
                       errors.city
-                        ? "border-red-500 bg-red-50/50"
-                        : "border-gray-200 focus:border-brand-orange focus:ring-1 focus:ring-brand-orange"
+                        ? "border-red-500 bg-red-50/50 dark:bg-red-950/30"
+                        : "border-gray-200 dark:border-slate-700 focus:border-brand-orange focus:ring-1 focus:ring-brand-orange"
                     }`}
                   />
                   {errors.city && (
@@ -226,14 +226,14 @@ export default function DriverModal({ isOpen, onClose }) {
 
                 {/* Vehicle Type Dropdown */}
                 <div>
-                  <label className="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-1.5">
+                  <label className="block text-xs font-bold text-gray-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
                     Vehicle Type
                   </label>
                   <select
                     name="vehicleType"
                     value={formData.vehicleType}
                     onChange={handleChange}
-                    className="w-full px-3 py-2.5 rounded-xl border border-gray-200 text-sm text-gray-900 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange bg-white"
+                    className="w-full px-3 py-2.5 rounded-xl border border-gray-200 dark:border-slate-700 text-sm text-gray-900 dark:text-white bg-white dark:bg-slate-800 focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange"
                   >
                     <option value="Bike">Bike</option>
                     <option value="Scooter">Scooter</option>

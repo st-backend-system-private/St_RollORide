@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowLeft, Bike, Menu, X } from "lucide-react";
+import { ArrowLeft, Menu, X } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar({ onOpenEarlyAccess }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -34,7 +35,7 @@ export default function Navbar({ onOpenEarlyAccess }) {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all">
+    <header className="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-gray-100 dark:border-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         {/* Left Section: Shatripthi Link + Divider + RollORide Logo */}
         <div className="flex items-center gap-2 sm:gap-3">
@@ -42,13 +43,13 @@ export default function Navbar({ onOpenEarlyAccess }) {
             href="https://shatripthi.tech"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 text-[11px] sm:text-xs text-gray-500 hover:text-brand-orange transition-colors font-medium shrink-0"
+            className="flex items-center gap-1 text-[11px] sm:text-xs text-gray-500 dark:text-slate-400 hover:text-brand-orange dark:hover:text-brand-orange transition-colors font-medium shrink-0"
           >
             <ArrowLeft className="w-3.5 h-3.5 text-brand-orange" />
             <span>Shatripthi.tech</span>
           </a>
 
-          <div className="h-4 sm:h-5 w-px bg-gray-200 mx-0.5 sm:mx-1 shrink-0" />
+          <div className="h-4 sm:h-5 w-px bg-gray-200 dark:bg-slate-700 mx-0.5 sm:mx-1 shrink-0" />
 
           <a
             href="#hero"
@@ -70,7 +71,7 @@ export default function Navbar({ onOpenEarlyAccess }) {
               key={link.name}
               href={link.href}
               onClick={(e) => handleScroll(e, link.href)}
-              className="text-gray-600 hover:text-brand-dark text-sm font-semibold transition-colors relative py-1 group"
+              className="text-gray-600 dark:text-slate-300 hover:text-brand-dark dark:hover:text-white text-sm font-semibold transition-colors relative py-1 group"
             >
               {link.name}
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-orange transition-all duration-300 group-hover:w-full" />
@@ -78,8 +79,9 @@ export default function Navbar({ onOpenEarlyAccess }) {
           ))}
         </nav>
 
-        {/* Right Section: Download App Button */}
-        <div className="hidden md:flex items-center">
+        {/* Right Section: Theme Toggle + Download App Button */}
+        <div className="hidden md:flex items-center gap-4">
+          <ThemeToggle />
           <button
             onClick={handleDownloadClick}
             className="bg-brand-orange hover:bg-orange-600 text-white font-semibold text-sm px-6 py-2.5 rounded-full transition-all shadow-md shadow-orange-500/25 hover:shadow-lg hover:shadow-orange-500/35 active:scale-95 flex items-center gap-2"
@@ -88,11 +90,12 @@ export default function Navbar({ onOpenEarlyAccess }) {
           </button>
         </div>
 
-        {/* Mobile Hamburger Toggle */}
+        {/* Mobile Controls: Theme Toggle + Hamburger */}
         <div className="flex md:hidden items-center gap-2">
+          <ThemeToggle />
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-gray-700 hover:text-brand-orange focus:outline-none rounded-lg"
+            className="p-2 text-gray-700 dark:text-slate-200 hover:text-brand-orange dark:hover:text-brand-orange focus:outline-none rounded-lg"
             aria-label="Toggle Navigation Menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -102,13 +105,13 @@ export default function Navbar({ onOpenEarlyAccess }) {
 
       {/* Mobile Dropdown Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+        <div className="md:hidden bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-slate-800 px-4 pt-2 pb-6 space-y-3 shadow-xl transition-colors duration-300">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={(e) => handleScroll(e, link.href)}
-              className="block px-3 py-2 text-base font-semibold text-gray-700 hover:text-brand-orange hover:bg-orange-50 rounded-lg transition-colors"
+              className="block px-3 py-2 text-base font-semibold text-gray-700 dark:text-slate-200 hover:text-brand-orange dark:hover:text-brand-orange hover:bg-orange-50 dark:hover:bg-slate-800/80 rounded-lg transition-colors"
             >
               {link.name}
             </a>

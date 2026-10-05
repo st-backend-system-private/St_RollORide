@@ -14,7 +14,7 @@ export default function Home() {
   const [isEarlyAccessOpen, setIsEarlyAccessOpen] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col bg-white selection:bg-brand-orange selection:text-white">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-slate-950 selection:bg-brand-orange selection:text-white transition-colors duration-300">
       <Navbar onOpenEarlyAccess={() => setIsEarlyAccessOpen(true)} />
       <main className="flex-grow">
         <Hero onOpenEarlyAccess={() => setIsEarlyAccessOpen(true)} />

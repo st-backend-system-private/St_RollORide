@@ -45,7 +45,7 @@ export default function ForRiders() {
               {riderBenefits.map((benefit) => (
                 <div
                   key={benefit.id}
-                  className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 sm:p-5 text-white transition-all hover:bg-white/15"
+                  className="bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 dark:border-white/15 rounded-2xl p-4 sm:p-5 text-white transition-all hover:bg-white/15 dark:hover:bg-black/30"
                 >
                   <div className="flex items-center gap-2.5 mb-1.5">
                     <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center shrink-0">
@@ -65,7 +65,7 @@ export default function ForRiders() {
             {/* Register as a Driver White Pill Button */}
             <button
               onClick={() => setIsModalOpen(true)}
-              className="bg-white text-brand-orange hover:bg-orange-50 font-extrabold text-sm sm:text-base px-8 py-4 rounded-full transition-all shadow-xl shadow-black/10 active:scale-95 hover:shadow-2xl hover:scale-105"
+              className="bg-white dark:bg-slate-900 text-brand-orange dark:text-orange-400 hover:bg-orange-50 dark:hover:bg-slate-800 font-extrabold text-sm sm:text-base px-8 py-4 rounded-full transition-all shadow-xl shadow-black/10 active:scale-95 hover:shadow-2xl hover:scale-105 border border-transparent dark:border-slate-800"
             >
               Register as a Driver
             </button>
@@ -74,9 +74,9 @@ export default function ForRiders() {
           {/* Right Column: Image & Overlapping Earnings Card */}
           <div className="w-full lg:w-[48%] relative z-10">
             {/* Image Container */}
-            <div className="relative w-full h-[360px] sm:h-[440px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20">
+            <div className="relative w-full h-[360px] sm:h-[440px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 dark:border-white/15">
               <Image
-                src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80"
+                src="/bike-rider.jpg"
                 alt="RollORide driver in Kolkata"
                 fill
                 sizes="(max-width: 1024px) 100vw, 48vw"
@@ -85,16 +85,16 @@ export default function ForRiders() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             </div>
 
-            {/* Floating White Card Overlapping Bottom-Left Corner */}
-            <div className="absolute -bottom-5 -left-3 sm:bottom-6 sm:-left-6 bg-white rounded-2xl p-4 sm:p-4.5 shadow-2xl border border-orange-100 flex items-center gap-3.5 z-20 transform hover:scale-105 transition-transform">
-              <div className="w-11 h-11 rounded-full bg-orange-100 text-brand-orange flex items-center justify-center shrink-0">
+            {/* Floating White/Dark Card Overlapping Bottom-Left Corner */}
+            <div className="absolute -bottom-5 -left-3 sm:bottom-6 sm:-left-6 bg-white dark:bg-slate-900 rounded-2xl p-4 sm:p-4.5 shadow-2xl border border-orange-100 dark:border-slate-800 flex items-center gap-3.5 z-20 transform hover:scale-105 transition-all duration-300">
+              <div className="w-11 h-11 rounded-full bg-orange-100 dark:bg-orange-950/80 text-brand-orange flex items-center justify-center shrink-0">
                 <Clock className="w-6 h-6 text-brand-orange stroke-[2.5]" />
               </div>
               <div>
-                <h5 className="font-extrabold text-gray-900 text-sm sm:text-base leading-tight">
+                <h5 className="font-extrabold text-gray-900 dark:text-white text-sm sm:text-base leading-tight">
                   ₹1,200 — Today
                 </h5>
-                <p className="text-xs text-gray-500 font-semibold mt-0.5">
+                <p className="text-xs text-gray-500 dark:text-slate-400 font-semibold mt-0.5">
                   14 rides completed
                 </p>
               </div>

@@ -12,7 +12,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="bg-slate-50/80 py-20 lg:py-28 border-t border-gray-100">
+    <section id="faq" className="bg-slate-50/80 dark:bg-slate-900/90 py-20 lg:py-28 border-t border-gray-100 dark:border-slate-800/80 transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
@@ -22,7 +22,7 @@ export default function FAQ() {
           </span>
 
           {/* Heading */}
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-brand-dark tracking-tight">
+          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-brand-dark dark:text-white tracking-tight">
             Common Questions
           </h2>
         </div>
