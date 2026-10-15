@@ -46,7 +46,7 @@ export default function Navbar({ onOpenEarlyAccess }) {
             className="flex items-center gap-1 text-[11px] sm:text-xs text-gray-500 dark:text-slate-400 hover:text-brand-orange dark:hover:text-brand-orange transition-colors font-medium shrink-0"
           >
             <ArrowLeft className="w-3.5 h-3.5 text-brand-orange" />
-            <span>Shatripthi.in</span>
+            <span>Shatripthitechnologiespvtltd.in</span>
           </a>
 
           <div className="h-4 sm:h-5 w-px bg-gray-200 dark:bg-slate-700 mx-0.5 sm:mx-1 shrink-0" />
