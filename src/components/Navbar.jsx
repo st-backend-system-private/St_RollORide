@@ -40,7 +40,7 @@ export default function Navbar({ onOpenEarlyAccess }) {
         {/* Left Section: Shatripthi Link + Divider + RollORide Logo */}
         <div className="flex items-center gap-2 sm:gap-3">
           <a
-            href="https://shatripthi.tech"
+            href="https://www.shatripthitechnologiespvtltd.in/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 text-[11px] sm:text-xs text-gray-500 dark:text-slate-400 hover:text-brand-orange dark:hover:text-brand-orange transition-colors font-medium shrink-0"
